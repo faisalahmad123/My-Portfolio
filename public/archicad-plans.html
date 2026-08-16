@@ -1,1 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ArchiCAD Plans — Faisal Ahmad</title>
 
+<!--
+  IMPORTANT: If your site already has a shared stylesheet (the one /projects uses),
+  link it here instead so fonts/colors/header match exactly:
+  <link rel="stylesheet" href="/styles.css" />
+  The <style> block below is a fallback so this page still looks right on its own.
+-->
+
+<style>
+  :root {
+    --bg: #0a0e1a;
+    --card-bg: #10162b;
+    --gold: #f5a623;
+    --text-main: #eef1f8;
+    --text-muted: #9aa4b8;
+    --border: #f5a62355;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text-main);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+  }
+
+  h1, h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+  }
+
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem;
+  }
+
+  .site-header a {
+    color: var(--text-main);
+    text-decoration: none;
+  }
+
+  .site-header nav a {
+    margin-left: 1.5rem;
+    color: var(--text-muted);
+  }
+
+  .site-header nav a.active {
+    color: var(--text-main);
+    border-bottom: 2px solid var(--gold);
+    padding-bottom: 4px;
+  }
+
+  .plans-page h1 {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .plans-page > p {
+    text-align: center;
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+  }
+
+  .plans-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.25rem;
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+  }
+
+  .project-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-thumbnail {
+    position: relative;
+  }
+
+  .project-thumbnail img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .project-thumbnail-badge {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: #000000aa;
+    color: var(--text-main);
+    font-size: 0.65rem;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 20px;
+  }
+
+  .project-card-body {
+    padding: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .tag {
+    color: var(--gold);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .project-card-body h3 {
+    font-size: 1rem;
+    margin: 0.4rem 0;
+  }
+
+  .project-card-body p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    flex-grow: 1;
+  }
+
+  .project-actions {
+    margin-top: 0.75rem;
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: #10162b;
+    font-size: 0.8rem;
+    padding: 0.5rem 0.75rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .project-file-type {
+    display: block;
+    text-align: center;
+    margin-top: 0.4rem;
+    font-size: 0.7rem;
+    color: var(--text-muted);
+  }
+
+  /* Tablet: 4 columns */
+  @media (max-width: 1100px) {
+    .plans-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  /* Mobile: 3 columns */
+  @media (max-width: 700px) {
+    .plans-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      padding: 0 1rem;
+    }
+    .project-thumbnail img {
+      height: 90px;
+    }
+    .project-card-body h3 {
+      font-size: 0.8rem;
+    }
+    .project-card-body p {
+      display: none;
+    }
+    .project-file-type {
+      display: none;
+    }
+    .btn-primary {
+      font-size: 0.7rem;
+      padding: 0.4rem 0.5rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <!-- Replace this header with the exact one copied from your /projects page source, so nav matches exactly -->
+  <header class="site-header">
+    <a href="/">Faisal Ahmad</a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/projects" class="active">Projects</a>
+      <a href="/skills">Skills</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </header>
+
+  <main class="plans-page">
+    <h1>ArchiCAD Plans</h1>
+    <p>A collection of ArchiCAD building plans available for download.</p>
+
+    <div class="plans-grid">
+
+      <article class="card project-card">
+        <div class="project-thumbnail">
+          <img src="/images/projects/Bungalow3.png" alt="Preview of Bungalow Concept" loading="lazy" />
+          <span class="project-thumbnail-badge">3D model</span>
+        </div>
+        <div class="project-card-body">
+          <span class="tag">ArchiCAD</span>
+          <h3>Bungalow Concept</h3>
+          <p>Conceptual design and 3D modeling for a small public-use building.</p>
+          <div class="project-actions">
+            <a class="btn btn-primary"
+               href="https://github.com/faisalahmad123/My-Portfolio/releases/download/v1.0/Bungalow-3D.pln">
+              <span aria-hidden="true">↓</span> Download
+            </a>
+            <span class="project-file-type">PLN · 3D model</span>
+          </div>
+        </div>
+      </article>
+
+      <!--
+        HOW TO ADD A NEW PLAN LATER:
+        1. Upload the new .pln file as a GitHub Release asset.
+        2. Copy the entire <article class="card project-card"> ... </article> block above.
+        3. Paste it right after this comment.
+        4. Update: image src, alt text, title (h3), description (p), and the download href.
+      -->
+
+    </div>
+  </main>
+
+</body>
+</html>
