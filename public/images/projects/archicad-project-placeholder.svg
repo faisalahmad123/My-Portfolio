@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">ArchiCAD project preview placeholder</title>
+  <desc id="desc">A stylised architectural model and floor plan used until a project preview image is added.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1c2c4d" />
+      <stop offset="1" stop-color="#0f1a2e" />
+    </linearGradient>
+    <linearGradient id="front" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#4c6d9c" />
+      <stop offset="1" stop-color="#2b4367" />
+    </linearGradient>
+    <linearGradient id="side" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#294568" />
+      <stop offset="1" stop-color="#1b304e" />
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#background)" />
+  <g opacity="0.2" stroke="#9fb0cf" stroke-width="2">
+    <path d="M0 160H1600M0 320H1600M0 480H1600M0 640H1600M0 800H1600" />
+    <path d="M160 0V1000M320 0V1000M480 0V1000M640 0V1000M800 0V1000M960 0V1000M1120 0V1000M1280 0V1000M1440 0V1000" />
+  </g>
+  <g transform="translate(890 170)">
+    <path d="M0 160 245 25 500 160 255 300Z" fill="#6085b6" />
+    <path d="M0 160 255 300V610L0 475Z" fill="url(#front)" />
+    <path d="M255 300 500 160V475L255 610Z" fill="url(#side)" />
+    <path d="M54 187 228 278V382L54 291ZM54 344 228 435V539L54 448Z" fill="#0f1a2e" opacity="0.86" />
+    <path d="M284 317 449 226V330L284 421ZM284 475 449 384V488L284 579Z" fill="#1c2c4d" opacity="0.8" />
+    <path d="M255 300V610" stroke="#f5b400" stroke-width="8" opacity="0.85" />
+  </g>
+  <g transform="translate(130 310)" fill="none" stroke="#d8e3f7" stroke-width="16" stroke-linejoin="round">
+    <path d="M0 0H510V355H0Z" />
+    <path d="M0 180H510M185 0V180M345 0V180M185 180V355" />
+    <path d="M345 180V280H510" />
+    <path d="M50 45H135V125H50ZM235 45H300V125H235ZM50 230H135V305H50Z" fill="#3aa1ff" fill-opacity="0.35" />
+    <path d="M235 230H305" stroke="#f5b400" stroke-width="24" />
+  </g>
+  <text x="130" y="785" fill="#f5b400" font-family="Arial, sans-serif" font-size="38" font-weight="700" letter-spacing="9">ARCHICAD PROJECT</text>
+  <text x="130" y="850" fill="#e8eefc" font-family="Arial, sans-serif" font-size="48" font-weight="700">Add your 3D model preview</text>
+  <text x="130" y="904" fill="#9fb0cf" font-family="Arial, sans-serif" font-size="28">Export an Archicad view as JPG or WebP, then replace this image.</text>
+</svg>
